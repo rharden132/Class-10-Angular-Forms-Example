@@ -1,27 +1,23 @@
-# FormsProject
+# Class 10 - Forms Exercise
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+## How to Start
 
-## Development server
+1. On this page, find the green button that says "Code". Click it and download the ZIP file.
+2. Unzip the folder and open in VSCode
+3. Open a terminal at this folder and run `npm install` to download the node_modules dependencies.
+4. Code!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Steps
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Inside the "BookFormTemplateComponent": Create a template-driven form that prints all of the form fields to the console when the submit button is clicked.
+2. Inside the "BookFormReactiveComponent": Create a reactive-driven form that prints all of the form fields to the console when the submit button is clicked.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Viewing the Final Product
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. On this page in github, on the same line as the "code" button but on the left side... you should see a dropdown with the text "Starting-Code".
+2. Click the dropdown and select final code.
+3. You should now be able to view the files of the finished project.
