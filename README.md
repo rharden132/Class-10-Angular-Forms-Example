@@ -19,5 +19,5 @@
 ## Viewing the Final Product
 
 1. On this page in github, on the same line as the "code" button but on the left side... you should see a dropdown with the text "Starting-Code".
-2. Click the dropdown and select final code.
+2. Click the dropdown and select "Final-Project".
 3. You should now be able to view the files of the finished project.
