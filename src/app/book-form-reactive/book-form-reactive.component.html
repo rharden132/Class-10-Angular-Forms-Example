@@ -1,1 +1,38 @@
-<p>book-form-reactive works!</p>
+<!-- ~~~ !TEMPLATE DRIVEN APPROACH! ~~~ -->
+<form>
+  <div id="book-data">
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" class="form-control" />
+    </div>
+
+    <!-- Author -->
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" class="form-control" />
+    </div>
+
+    <!-- Genre -->
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre" class="form-control">
+        <option value="mystery">Mystery</option>
+        <option value="self-help">Self-Help</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="science-fiction">Science Fiction</option>
+      </select>
+    </div>
+
+    <!-- Tags -->
+    <div class="form-group">
+      <p>Tags</p>
+      <label *ngFor="let tag of tags" class="mx-2">
+        <input type="checkbox" [value]="tag" />{{ tag }}
+      </label>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-warning" type="submit">Submit</button>
+  </div>
+</form>
