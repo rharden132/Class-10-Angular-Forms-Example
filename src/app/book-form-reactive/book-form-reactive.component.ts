@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-form-reactive.component.css'],
 })
 export class BookFormReactiveComponent implements OnInit {
-  tags: string[] = ['best-seller', 'featured', 'new'];
-
   constructor() {}
 
   ngOnInit(): void {}
