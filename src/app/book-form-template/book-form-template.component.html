@@ -1,28 +1,31 @@
 <!-- ~~~ !TEMPLATE DRIVEN APPROACH! ~~~ -->
-<form>
+<form (ngSubmit)="onFormSubmit(formRef)" #formRef="ngForm">
   <div id="book-data">
     <!-- Title -->
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" id="title" name="title" class="form-control" />
+      <input type="text" id="title" name="title" class="form-control" [(ngModel)]="bookTitle" #titleRef="ngModel" ngModel required />
     </div>
+    <span class="help-block text-danger" *ngIf="!titleRef.valid && titleRef.touched">Please enter a book title!</span>
 
     <!-- Author -->
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" id="author" name="author" class="form-control" />
+      <input type="text" id="author" name="author" class="form-control" #authorRef="ngModel" ngModel required />
     </div>
+    <span class="help-block text-danger" *ngIf="!authorRef.valid && authorRef.touched">Please enter a book author!</span>
 
     <!-- Genre -->
     <div class="form-group">
       <label for="genre">Genre</label>
-      <select id="genre" name="genre" class="form-control">
+      <select id="genre" name="genre" class="form-control" #genreRef="ngModel" [ngModel]="'mystery'" required>
         <option value="mystery">Mystery</option>
         <option value="self-help">Self-Help</option>
         <option value="fantasy">Fantasy</option>
         <option value="science-fiction">Science Fiction</option>
       </select>
     </div>
+    <span class="help-block text-danger" *ngIf="!genreRef.valid && genreRef.touched">Please select a book genres!</span>
 
     <!-- isBestSeller -->
     <div class="form-group">
@@ -38,6 +41,11 @@
     </div>
 
     <!-- Submit Button -->
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!formRef.valid">Submit {{bookTitle}}</button>
   </div>
 </form>
+<div id="div" class="col-md-12" *ngIf="formSubmitted">
+  <h3>{{bookDetails.title}}</h3>
+  <h4>{{bookDetails.author}}</h4>
+  <h4>{{bookDetails.genre}}</h4>
+</div>

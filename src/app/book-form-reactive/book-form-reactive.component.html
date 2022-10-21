@@ -1,28 +1,31 @@
 <!-- ~~~ !TEMPLATE DRIVEN APPROACH! ~~~ -->
-<form>
+<form [formGroup]="reactiveForm" (ngSubmit)="onFormSubmit()">
   <div id="book-data">
     <!-- Title -->
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" id="title" name="title" class="form-control" />
+      <input type="text" id="title" name="title" class="form-control" formControlName="title"/>
     </div>
+    <span class="help-block text-danger" *ngIf="!reactiveForm.get('title').valid && reactiveForm.get('title').touched">Please enter a book title!</span>
 
     <!-- Author -->
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" id="author" name="author" class="form-control" />
+      <input type="text" id="author" name="author" class="form-control" formControlName="author"/>
     </div>
+    <span class="help-block text-danger" *ngIf="!reactiveForm.get('author').valid && reactiveForm.get('author').touched">Please enter a book author!</span>
 
     <!-- Genre -->
     <div class="form-group">
       <label for="genre">Genre</label>
-      <select id="genre" name="genre" class="form-control">
+      <select id="genre" name="genre" class="form-control" formControlName="genre">
         <option value="mystery">Mystery</option>
         <option value="self-help">Self-Help</option>
         <option value="fantasy">Fantasy</option>
         <option value="science-fiction">Science Fiction</option>
       </select>
     </div>
+    <span class="help-block text-danger" *ngIf="!reactiveForm.get('genre').valid && reactiveForm.get('genre').touched">Please select a book genres!</span>
 
     <!-- isBestSeller -->
     <div class="form-group">
@@ -41,3 +44,8 @@
     <button class="btn btn-warning" type="submit">Submit</button>
   </div>
 </form>
+<div id="div" class="col-md-12" *ngIf="formSubmitted">
+  <h3>{{reactiveForm.value.title}}</h3>
+  <h4>{{reactiveForm.value.author}}</h4>
+  <h4>{{reactiveForm.value.genre}}</h4>
+</div>

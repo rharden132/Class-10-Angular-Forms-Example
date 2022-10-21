@@ -34,3 +34,16 @@
 1. On this page in github, on the same line as the "code" button but on the left side... you should see a dropdown with the text "Starting-Code".
 2. Click the dropdown and select "Final-Project".
 3. You should now be able to view the files of the finished project.
+
+
+
+Questions for end of exercise:
+
+   Define the "Template-Driven-Approach" and the "Reactive-Driven-Approach"?
+      Template driven forms are are designed and edited in the html template where as with the reactive form approach you spend more time in the typescript file.
+
+   Explain their differences and what each excel at doing?
+      I noticed with Reactive forms, the form data in the template is linked to variables in th typescript. In a template driven form the majority of the data and logic used for the form is written out in the html template. This makes reactive forms better for writing out detailed logic to be used on the form and template forms better for simple fast writing of forms.
+
+   Write about what you find easy and what is challenging about each?
+      I find with template driven forms keeping track of the variables and where they are used is easier but I could see how writing out detailed and lengthy logic would be better suited for reactive forms. In Reactive forms accessing certain variables and properties is not necessarily more difficult than with template forms but it does take longer in reactive forms. In my opinion creating a form with simple logic would be much easier and faster in a template form. 
